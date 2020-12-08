@@ -1,12 +1,6 @@
-const dotenv = require("dotenv")
+const dotenv = require("dotenv").
 
 const result = dotenv.config()
-
-if (result.error) {
-  throw result.error
-}
-
-console.log(result.parsed)
 
 module.exports = {
   siteMetadata: {
@@ -31,9 +25,7 @@ module.exports = {
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
-        maxResults: 200,
-        // type: `private`,
-        // prefix: `medium`,
+        maxResults: 200
       },
     },
   ],
